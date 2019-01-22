@@ -2,16 +2,12 @@ const express = require('express');
 const app = express();
 require('./db/db.js');
 const Cities = require('./models/cities');
+const citiesRouter = require('./routers/cities');
+
+app.use('/cities', citiesRouter);
 
 app.get('/', (req, res) => {
-    Cities.find({}, (err, allCities) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(allCities);
-            res.render('../views/cities/index.ejs');
-        }
-    });
+    res.render('../views/home.ejs');
 });
 
 
