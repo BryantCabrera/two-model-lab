@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = 'mongodb://localhost/veganfood';
+const connectionString = 'mongodb://localhost/citycoffee';
 
 mongoose.connect(connectionString, {
     useCreateIndex: true,
