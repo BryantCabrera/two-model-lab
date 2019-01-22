@@ -1,0 +1,19 @@
+{
+  "name": "two-model-lab",
+  "version": "1.0.0",
+  "description": "# Lab: Two Model (no relationship) CRUD",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryantCabrera/two-model-lab.git"
+  },
+  "author": "Bryant & Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryantCabrera/two-model-lab/issues"
+  },
+  "homepage": "https://github.com/BryantCabrera/two-model-lab#readme"
+}
