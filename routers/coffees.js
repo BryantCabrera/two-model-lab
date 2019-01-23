@@ -21,7 +21,7 @@ router.get('/new', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    Cities.create(req.body, (err, createdCity) => {
+    Coffees.create(req.body, (err, createdCoffee) => {
         if(err) {
             console.log(err);
         } else {
