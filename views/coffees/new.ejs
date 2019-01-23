@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs', {
+    title: 'Create New Coffee'
+}); %>
+    <header>
+        <h1>Create New Coffee</h1>
+    </header>
+    <main>
+        <form action="/coffees" method="POST">
+            Name: <input type="text" name="name">
+            Population: <input type="number" name="population">
+            # of Coffee Shops: <input type="number" name="coffeeShops">
+            <button type="submit">Create City</button>
+        </form>
+    </main>
+
+
+
+
+
+<%- include('../partials/footer.ejs'); %>

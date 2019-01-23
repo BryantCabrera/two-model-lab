@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Cities = require('../models/coffees');
+const Coffees = require('./models/coffees');
+
 
 router.get('/', (req, res) => {
     Coffees.find({}, (err, allCoffees) => {
@@ -17,7 +18,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/new', (req, res) => {
-    res.render('../views/cities/new.ejs');
+    res.render('../views/coffees/new.ejs');
 });
 
 router.post('/', (req, res) => {
