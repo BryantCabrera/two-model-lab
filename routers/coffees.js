@@ -43,11 +43,11 @@ router.get('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    Cities.findByIdAndRemove(req.params.id, (err, deletedCity) => {
+    Coffees.findByIdAndRemove(req.params.id, (err, deletedCoffee) => {
         if(err) {
             console.log(err);
         } else {
-            res.redirect('/cities');
+            res.redirect('/coffees');
         }
     });
 });
