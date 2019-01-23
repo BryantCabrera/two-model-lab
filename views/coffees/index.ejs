@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs', {
+    title: 'Coffee Index'
+}); %>
+
+    <h1>Coffees Index</h1>
+    <ul>
+        <% coffees.forEach( city => { %>
+            <li><a href="/coffees/<%= coffee._id %>"><%= coffee.name %></a></li>
+        <% }); %>
+    </ul>
+
+<%- include('../partials/footer.ejs'); %>
