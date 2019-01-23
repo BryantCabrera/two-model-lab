@@ -42,4 +42,14 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.delete('/:id', (req, res) => {
+    Cities.findByIdAndRemove(req.params.id, (err, deletedCity) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect('/cities');
+        }
+    });
+});
+
 module.exports = router;

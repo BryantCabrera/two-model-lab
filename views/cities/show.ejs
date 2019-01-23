@@ -15,6 +15,9 @@
     <%= city.name %><br>
     <%= city.population %><br>
     <%= city.coffeeShops %><br>
+    <form action="/cities/<%= city._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete City</button>
+    </form>
     </main>
 
 <%- include('../partials/footer.ejs'); %>

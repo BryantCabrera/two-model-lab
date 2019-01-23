@@ -5,8 +5,10 @@ const Cities = require('./models/cities');
 const citiesRouter = require('./routers/cities');
 
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
 app.use('/cities', citiesRouter);
 
 app.get('/', (req, res) => {
