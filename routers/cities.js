@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/new', (req, res) => {
-    res.render('../views/cities/new.ejs')
+    res.render('../views/cities/new.ejs');
 });
 
 router.post('/', (req, res) => {
@@ -26,6 +26,18 @@ router.post('/', (req, res) => {
             console.log(err);
         } else {
             res.redirect('/');
+        }
+    });
+});
+
+router.get('/:id', (req, res) => {
+    Cities.findById(req.params.id, (err, foundCity) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('../views/cities/show.ejs', {
+                city: foundCity
+            });
         }
     });
 });

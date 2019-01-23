@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs', {
+    title: `${city.name} Show Page`
+}); %>
+
+    <header>
+        <h1><%= city.name %> Show Page</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cities">Cities</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <%= city.name %><br>
+    <%= city.population %><br>
+    <%= city.coffeeShops %><br>
+    </main>
+
+<%- include('../partials/footer.ejs'); %>
