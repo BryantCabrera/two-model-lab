@@ -4,6 +4,9 @@ require('./db/db.js');
 const Cities = require('./models/cities');
 const citiesRouter = require('./routers/cities');
 
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: true}));
 app.use('/cities', citiesRouter);
 
 app.get('/', (req, res) => {

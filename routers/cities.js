@@ -8,7 +8,24 @@ router.get('/', (req, res) => {
             console.log(err);
         } else {
             console.log(allCities);
-            res.render('../views/cities/index.ejs');
+            res.render('../views/cities/index.ejs', {
+                cities: allCities
+            });
+        }
+    });
+});
+
+
+router.get('/new', (req, res) => {
+    res.render('../views/cities/new.ejs')
+});
+
+router.post('/', (req, res) => {
+    Cities.create(req.body, (err, createdCity) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect('/');
         }
     });
 });

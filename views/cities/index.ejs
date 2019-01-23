@@ -3,6 +3,10 @@
 }); %>
 
     <h1>Cities Index</h1>
-
+    <ul>
+        <% cities.forEach( city => { %>
+            <li><a href="/cities/<%= city._id %>"><%= city.name %></a></li>
+        <% }); %>
+    </ul>
 
 <%- include('../partials/footer.ejs'); %>
