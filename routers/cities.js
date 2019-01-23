@@ -52,4 +52,16 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.get('/:id/edit', (req, res) => {
+    Cities.findById(req.params.id, (err, foundCity) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render('../views/cities/edit.ejs', {
+                city: foundCity
+            });
+        }
+    }); 
+});
+
 module.exports = router;

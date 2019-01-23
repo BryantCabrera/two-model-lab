@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs', {
+    title: `${city.name} Edit Page`
+}); %>
+
+    <header>
+        <h1><%= city.name %> Edit Page</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/cities">Cities</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    
+    <form action="/cities/<%= city._id %>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%= city.name %>"><br>
+        Population: <input type="text" name="population" value="<%= city.population %>"><br>
+        Coffee Shops: <input type="text" name="coffeeShops" value="<%= city.coffeeShops %>"><br>
+        <button type="submit">Edit City</button>
+    </form>
+    </main>
+
+<%- include('../partials/footer.ejs'); %>
