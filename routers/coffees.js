@@ -53,12 +53,12 @@ router.delete('/:id', (req, res) => {
 });
 
 router.get('/:id/edit', (req, res) => {
-    Cities.findById(req.params.id, (err, foundCity) => {
+    Coffees.findById(req.params.id, (err, foundCoffee) => {
         if(err) {
             console.log(err);
         } else {
-            res.render('../views/cities/edit.ejs', {
-                city: foundCity
+            res.render('../views/coffees/edit.ejs', {
+                coffee: foundCoffee
             });
         }
     }); 
