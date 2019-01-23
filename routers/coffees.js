@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Coffees = require('./models/coffees');
+const Coffees = require('../models/coffees');
 
 
 router.get('/', (req, res) => {
@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         } else {
             console.log(allCoffees);
             res.render('../views/coffees/index.ejs', {
-                coffee: allCoffees
+                coffees: allCoffees
             });
         }
     });
