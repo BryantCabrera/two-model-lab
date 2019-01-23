@@ -16,7 +16,6 @@ router.get('/', (req, res) => {
     });
 });
 
-
 router.get('/new', (req, res) => {
     res.render('../views/coffees/new.ejs');
 });
