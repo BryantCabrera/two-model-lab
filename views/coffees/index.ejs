@@ -4,7 +4,7 @@
 
     <h1>Coffees Index</h1>
     <ul>
-        <% coffees.forEach( city => { %>
+        <% coffees.forEach( coffee => { %>
             <li><a href="/coffees/<%= coffee._id %>"><%= coffee.name %></a></li>
         <% }); %>
     </ul>
