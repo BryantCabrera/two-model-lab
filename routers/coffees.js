@@ -65,11 +65,11 @@ router.get('/:id/edit', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    Cities.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, foundCity) => {
+    Coffees.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, foundCoffee) => {
         if (err) {
             console.log(err);
         } else {
-            res.redirect('/cities');
+            res.redirect('/coffees');
         }
     });
 });
