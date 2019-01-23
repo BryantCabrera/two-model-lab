@@ -64,4 +64,14 @@ router.get('/:id/edit', (req, res) => {
     }); 
 });
 
+router.put('/:id', (req, res) => {
+    Cities.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, foundCity) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect('/cities');
+        }
+    });
+});
+
 module.exports = router;

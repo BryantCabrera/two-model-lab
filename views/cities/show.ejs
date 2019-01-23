@@ -15,6 +15,7 @@
     <%= city.name %><br>
     <%= city.population %><br>
     <%= city.coffeeShops %><br>
+    <a href="/cities/<%= city._id %>/edit">Edit</a>
     <form action="/cities/<%= city._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete City</button>
     </form>
