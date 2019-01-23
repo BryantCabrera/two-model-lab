@@ -1,0 +1,24 @@
+<%- include('../partials/header.ejs', {
+    title: `${coffee.name} Show Page`
+}); %>
+
+    <header>
+        <h1><%= coffee.name %> Show Page</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/coffees">Coffees</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <%= coffee.name %><br>
+    <%= coffee.population %><br>
+    <%= coffee.coffeeShops %><br>
+    <a href="/coffees/<%= coffee._id %>/edit">Edit</a>
+    <form action="/coffees/<%= coffee._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Coffee</button>
+    </form>
+    </main>
+
+<%- include('../partials/footer.ejs'); %>

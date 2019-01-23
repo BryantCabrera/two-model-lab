@@ -31,12 +31,12 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-    Cities.findById(req.params.id, (err, foundCity) => {
+    Coffees.findById(req.params.id, (err, foundCoffee) => {
         if (err) {
             console.log(err);
         } else {
-            res.render('../views/cities/show.ejs', {
-                city: foundCity
+            res.render('../views/coffees/show.ejs', {
+                coffee: foundCoffee
             });
         }
     });
